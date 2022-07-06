@@ -95,7 +95,7 @@ li{
 .fv{
     height: 100vh;
     min-height: 550px;
-    background-image: url(/img/fv.jpg);
+    background-image: url(https://github.com/shinyakt/sample/blob/main/img/fv.jpg?raw=true);
     background-size: cover;
     background-position: center;
     display: flex;
