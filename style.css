@@ -1,0 +1,392 @@
+/* ------------------- */
+/* base
+/* ------------------- */
+@charset "UTF-8";
+
+html{
+    font-size: 100%;
+}
+body{
+    font-family: 'Roboto', sans-serif,'Noto Sans JP', serif;
+    line-height: 2rem;
+    letter-spacing: .05rem;
+    color: #141414;
+}
+img{
+    width: 100%;
+    vertical-align: bottom;
+}
+
+.section-wrapper{
+    padding: 100px 0 50px;
+}
+.section-inner{
+    max-width: 1030px;
+    margin: 0 auto;
+    padding: 0 4vw;
+}
+.section-title{
+    /* max-width: ; */
+    font-size: 2rem;
+    margin: 0 auto 70px;     /*下70pxのためにとりあえauto入れるけど幅を指定してないのでセンターにはならない*/
+    text-align: center;
+}
+.section-lead{
+    font-weight: bold;
+    font-size: 1.5rem;
+    line-height: 3rem;
+    letter-spacing: .2rem;
+    margin-bottom: 45px;
+}
+.section-text{
+    font-weight: bold;
+    font-size: .9rem;
+    line-height: 2rem;
+    letter-spacing: .05rem;
+}
+li{
+    list-style: none;
+}
+
+/* ------------------- */
+/* header
+/* ------------------- */
+.header{
+    /* border:2px solid #ff1493; */
+    border-bottom: 2px solid #fff;
+    background-color: #282F35;
+    color: #FFFFFF;
+    padding: 0 20px;
+}
+.header-inner{
+    /* border:2px solid deeppink; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 24px 0;
+}
+.site-title{
+    font-size: 2rem;
+}
+.header a{
+    color: #fff;
+    text-decoration: none;
+    transition: .3s;
+    /* font-weight: bold; */
+}
+.nav-list{
+    display: flex;
+}
+.nav-item{
+    margin-right: 55px;
+}
+.nav-item:last-of-type{
+    margin-right: 0;              /*最後のやつにはmarginがつかない*/
+}
+.burger-btn{
+    display: none;        /*これをするとtitleとnavがいっぱいに広がる*/
+}
+
+/* ------------------- */
+/* first view
+/* ------------------- */
+.fv{
+    height: 100vh;
+    min-height: 550px;
+    background-image: url(/img/fv.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.main-copy{
+    border:2px solid #fff;
+}
+.page-title{
+    color: #fff;
+    /* font-weight: bold; */
+    line-height: 1.5em;
+    letter-spacing: .05em;
+    font-size: 3.1rem;
+    margin: 35px 42px;
+}
+
+/* ------------------- */
+/* about
+/* ------------------- */
+
+/* ------------------- */
+/* service
+/* ------------------- */
+.section-inner.reverse{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+.section-inner.flex{
+    display: flex;
+    justify-content: space-between;
+}
+.section-content{
+    max-width: 480px;
+    /* align-items: center; */
+
+    width: 50%;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+
+/* ------------------- */
+/* news
+/* ------------------- */
+.news-list{
+    display: flex;
+}
+.news-item{
+    width: 33%;
+    margin-right: 25px;
+    box-shadow: 0px 0px 6px rgb(27,19,16,0.4);
+}
+.news-item:last-of-type{
+    margin-right: 0;
+}
+.news-item a{
+    text-decoration: none;
+}
+.news-list-text{
+    color: #141414;
+    font-size: .8rem;
+    line-height: 1.5rem;
+    font-weight: bold;
+    /* border: 2px solid #707070; */
+    /* box-shadow: 0px 0px 6px rgb(27,19,16,0.4); */
+    padding: 25px 32px;
+}
+
+/* ------------------- */
+/* contact
+/* ------------------- */
+.form-wrapper{
+    max-width: 700px;
+    margin: 0 auto 50px;
+    padding: 0 20px;
+}
+.form-item{
+    margin-bottom: 25px;
+}
+label{
+    display: block;         /*項目と入力欄の縦並び*/
+}
+input[type="text"],
+textarea{
+    width: 100%;
+    max-width: 700px;     /*.form-wrapperで指定してるので不要*/
+}
+textarea{
+    height: 170px;
+    line-height: 1.5rem;
+}
+.button{
+    display: block;
+    width: 235px;
+    line-height: 60px;
+    margin: 50px auto 0;
+    background-color: #282F35;
+    box-shadow: 0 0 6px #1B1310;
+    border-radius: 30px;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    transition: .3s;                /* なんとため？ */
+    border: none;
+
+}
+.button:hover{
+    opacity: .7;
+    transition: .3s;
+    cursor: pointer;
+}
+
+/* ------------------- */
+/* footer
+/* ------------------- */
+.footer{
+    padding: 30px 0;
+    text-align: center;
+    font-size: .8rem;
+    line-height: 0;       /*上下にpaddingをつけるため*/
+    color: #fff;
+    background-color: #282F35;
+}
+
+@media screen and (max-width:768px){
+/* ------------------- */
+/* base_sp
+/* ------------------- */
+.section-title{
+    font-size: 2.2rem;
+    margin-bottom: 75px;
+}
+.section-inner{
+    padding: 0 4vw;
+    max-width: 350px;         /*画面幅が中途半端な時に中央に揃える*/
+}
+.section-lead{
+    margin-bottom: 34px;
+}
+
+/* ------------------- */
+/* header_sp
+/* ------------------- */
+.header{
+    padding: 0 4vw 0;
+}
+.header-nav{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #282F35;
+}
+.nav-list{
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.nav-item{
+    margin: 0 0 30px;
+}
+.nav-item:last-of-type{
+    margin-bottom: 0;
+}
+.burger-btn{                  /*ハンバーガーボタンの位置の指定*/
+    display: block;
+    position: absolute;
+    top: 30px;
+    right: 4vw;
+}
+.burger-btn .bar{
+    display: block;           /*ハンバーガーボタンの見た目*/
+    height: 3px;
+    width: 30px;
+    background-color: #fff;
+    transition: .3s;          /*ハンバーガーボタンの動きを滑らかにする*/
+}
+.bar_top,
+.bar_mid{
+    margin-bottom: 8px;
+}
+.burger-btn.cross .bar_top{
+    transform: rotate(45deg) translate(8px,8px);
+    transition: .3s;            /*ハンバーガーボタンの動きを滑らかにする*/
+}
+.burger-btn.cross .bar_mid{
+    opacity: 0;
+    transition: .3s;            /*ハンバーガーボタンの動きを滑らかにする*/
+}
+.burger-btn.cross .bar_bottom{
+    transform: rotate(-45deg) translate(8px,-8px);
+    transition: .3s;            /*ハンバーガーボタンの動きを滑らかにする*/
+}
+body.noscroll{
+    overflow: hidden;    /*スクロールの固定*/
+}
+button{                            /*ボタンタグのリセット*/
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 0;
+    appearance: none;
+}
+button:hover{          /*クリックしないと変わらない？？*/
+    opacity: .7;
+    transition: .3s;
+}
+
+/* ------------------- */
+/* first view_sp
+/* ------------------- */
+.fv{
+    height: 100vh;
+    min-height: 550px;
+    background-image: url(/img/fv.jpg);
+    background-size: cover;
+    background-position: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.page-title{
+    color: #fff;
+    /* font-weight: bold; */
+    line-height: 1.5em;
+    letter-spacing: .05em;
+    font-size: 2em;
+    margin: 30px 40px;
+}
+.main-copy{
+    transform: translate(0, -25%);
+}
+
+/* ------------------- */
+/* about_sp
+/* ------------------- */
+
+/* ------------------- */
+/* service_sp
+/* ------------------- */
+.section-inner.reverse,
+.section-inner.flex{
+    display: block;
+}
+.section-content{
+    margin: 40px 15px;
+    width: 100%;
+}
+.section-content:last-of-type{
+    margin-bottom: 0;
+}
+
+
+/* ------------------- */
+/* news_sp
+/* ------------------- */
+.news-list{
+    display: block;
+}
+.news-item{
+    width: 100%;
+    margin-bottom: 20px;
+    margin-right: 0;
+}
+.news-item:last-of-type{
+    margin-bottom: 0;
+}
+.news-list-img{
+    background-size: cover;
+    background-position: center;
+}
+.section-inner.news{
+    max-width: 320px;           /*画面幅が中途半端な時に中央に揃える*/
+}
+
+/* ------------------- */
+/* contact_sp
+/* ------------------- */
+input[type="submit"]{
+    font-size: 1.3rem;
+}
+
+}
